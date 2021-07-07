@@ -2,7 +2,9 @@ package com.itmedicious.spliff.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
+import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.itmedicious.spliff.R
 
@@ -11,17 +13,21 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spalash_screen)
 
-        Handler().postDelayed(
-            Runnable() {
-                @Override
-                fun run() {
-                    val intent: Intent = Intent(this, MainActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    startActivity(intent)
-                    finish()
-                }
-            },
-            2000
-        )
+        val mSplashImage: View = findViewById(R.id.splash_logo)
+        val splashAnimImage = AnimationUtils.loadAnimation(this, R.anim.splash_anim_img)
+        mSplashImage.startAnimation(splashAnimImage)
+        splashAnimImage.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation) {}
+            override fun onAnimationEnd(animation: Animation) {
+                val intent= Intent(this@SplashScreenActivity,PrimaryActivity::class.java)
+                startActivity(intent)
+            }
+
+            override fun onAnimationRepeat(animation: Animation) {}
+        })
+
+
+
+
     }
 }

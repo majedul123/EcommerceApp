@@ -2,8 +2,114 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/primary_screen_background"
     tools:context=".activity.PrimaryActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/spliff_logo"
+        android:layout_width="69dp"
+        android:layout_height="74dp"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/parent_layout"
+        app:layout_constraintEnd_toEndOf="@+id/parent_layout"
+        app:layout_constraintStart_toStartOf="@+id/parent_layout"
+        app:layout_constraintTop_toTopOf="@+id/parent_layout"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/stay_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vt_space"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/stay_high"
+        android:textColor="@color/white"
+        android:textSize="50.76px"
+        app:fontFamily="@font/gilroy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spliff_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/stay_happy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vt_space"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/stay_happy"
+        android:textColor="@color/white"
+        android:textSize="50.76px"
+        app:fontFamily="@font/gilroy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stay_high" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/always"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vt_space"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/always"
+        android:textColor="@color/white"
+        android:textSize="50.76px"
+        app:fontFamily="@font/gilroy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stay_happy" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mid_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/join"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="@dimen/vt_space"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/join"
+        android:textColor="@color/green"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toStartOf="@id/mid_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/always" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/log_in"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/vt_space"
+        android:text="@string/log_in"
+        android:textColor="@color/white"
+        app:cornerRadius="4dp"
+        app:layout_constraintStart_toStartOf="@id/mid_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/always"
+        app:strokeColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableLeft="@drawable/ic_google_logo"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/gilroy"
+        android:text="Continue with google"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_in" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

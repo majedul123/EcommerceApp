@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">spliff</string>
+    <string name="stay_high">Stay High.</string>
+    <string name="stay_happy">Stay Happy.</string>
+    <string name="always">Always.</string>
+    <string name="join">join</string>
+    <string name="log_in">Log In</string>
 </resources>
