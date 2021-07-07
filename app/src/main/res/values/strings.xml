@@ -5,4 +5,6 @@
     <string name="always">Always.</string>
     <string name="join">join</string>
     <string name="log_in">Log In</string>
+    <string name="create_your_text">Create your</string>
+    <string name="account">account</string>
 </resources>
