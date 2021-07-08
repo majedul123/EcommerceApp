@@ -4,19 +4,234 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/vt_space"
+    android:layout_marginBottom="@dimen/hz_space"
     tools:context=".activity.ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mid_guideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/one_third_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/two_third_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vapes_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/vapes"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:fontFamily="@font/gilroy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/one_third_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/flowers_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/flowers"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:fontFamily="@font/gilroy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/two_third_guideline"
+        app:layout_constraintStart_toStartOf="@id/one_third_guideline" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/edibles_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/edibles"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:fontFamily="@font/gilroy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/two_third_guideline" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vapes_card"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="@dimen/vt_space"
+        android:backgroundTint="#E2E8ED"
+        android:elevation="2dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/vapes_text"
+        app:layout_constraintEnd_toEndOf="@id/one_third_guideline"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_vape" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="@dimen/vt_space"
+        android:backgroundTint="#F8EDDA"
+        android:elevation="2dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/flowers_text"
+        app:layout_constraintEnd_toEndOf="@id/two_third_guideline"
+        app:layout_constraintStart_toStartOf="@id/one_third_guideline">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_flower" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="@dimen/vt_space"
+        android:backgroundTint="#ECF3DD"
+        android:elevation="2dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/edibles_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/two_third_guideline"
+        app:srcCompat="@drawable/ic_editbles">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_editbles" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mark_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/vt_space"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/mark_the_text"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/vapes_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/top_catagory_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/vt_space"
+        android:fontFamily="@font/gilroy"
+        android:text="Top Categories"
+        android:textColor="#1E0702"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/mark_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/vt_space"
+        app:layout_constraintBottom_toTopOf="@+id/top_catagory_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tint="#E2E8E2"
+            app:srcCompat="@drawable/ic_pattern" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/discount_layout"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/leaves_image"
+                android:layout_width="47dp"
+                android:layout_height="56dp"
+                android:src="@drawable/ic_leaves"
+                app:layout_constraintEnd_toEndOf="@+id/discount_layout"
+                app:layout_constraintStart_toStartOf="@+id/discount_layout"
+                app:layout_constraintTop_toTopOf="@+id/discount_layout" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/percent_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vt_space"
+                android:fontFamily="@font/gilroy"
+                android:text="50% Off"
+                android:textColor="#1E0702"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/discount_layout"
+                app:layout_constraintStart_toStartOf="@+id/discount_layout"
+                app:layout_constraintTop_toBottomOf="@+id/leaves_image" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/everything_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vt_space"
+                android:fontFamily="@font/gilroy"
+                android:text="Everything"
+                android:textColor="#1E0702"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/discount_layout"
+                app:layout_constraintStart_toStartOf="@+id/discount_layout"
+                app:layout_constraintTop_toBottomOf="@+id/percent_off" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vt_space"
+                android:fontFamily="@font/gilroy"
+                android:text="with code: sativa 123"
+                android:textColor="#1E0702"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/discount_layout"
+                app:layout_constraintStart_toStartOf="@+id/discount_layout"
+                app:layout_constraintTop_toBottomOf="@+id/everything_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
