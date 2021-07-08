@@ -7,4 +7,28 @@
     <string name="log_in">Log In</string>
     <string name="create_your_text">Create your</string>
     <string name="account">account</string>
+    <string name="creating_account_terms">By creating an account you agree with our terms and conditions</string>
+    <string name="email_address">EMAIL ADDRESS</string>
+    <string name="password">PASSWORD</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="log_in_bottom">\? Log in</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="log_out">Log Out</string>
+    <string name="explore">Explore</string>
+    <string name="vapes">Vapes</string>
+    <string name="extracts">Extracts</string>
+    <string name="edibles">Edibles</string>
+    <string name="flowers">Flowers</string>
+    <string name="accessories">Accessories</string>
+    <string name="demo_email">dukauwa.du@gmail.com</string>
 </resources>
