@@ -37,5 +37,9 @@
     <string name="home">home</string>
     <string name="explore">Explore</string>
     <string name="search_here">Search Here</string>
+    <string name="registration_your">Registration your</string>
+    <string name="log_in_text">Log in</string>
+    <string name="new_user">New user</string>
+    <string name="registration">Registration</string>
 
 </resources>

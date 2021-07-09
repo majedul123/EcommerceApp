@@ -14,7 +14,7 @@ class PrimaryActivity : AppCompatActivity() {
         val login = findViewById<MaterialButton>(R.id.log_in)
 
         join.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }
         login.setOnClickListener {

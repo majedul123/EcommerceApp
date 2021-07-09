@@ -17,6 +17,7 @@
         app:layout_constraintEnd_toEndOf="@+id/parent_layout"
         app:layout_constraintStart_toStartOf="@+id/parent_layout"
         app:layout_constraintTop_toTopOf="@+id/parent_layout"
+        android:layout_marginBottom="@dimen/hz_space"
         app:srcCompat="@drawable/ic_logo" />
 
     <androidx.appcompat.widget.AppCompatTextView

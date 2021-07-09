@@ -1,12 +1,13 @@
 package com.itmedicious.spliff.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.itmedicious.spliff.R
+import androidx.appcompat.app.AppCompatActivity
+import com.itmedicious.spliff.databinding.ActivityRegistrationBinding
 
 class RegistrationActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRegistrationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registration)
-    }
+        binding = ActivityRegistrationBinding.inflate(layoutInflater)
+        setContentView(binding.root)  }
 }
