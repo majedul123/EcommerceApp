@@ -24,7 +24,6 @@
     <string name="menu_vapes">Vapes</string>
     <string name="menu_extracts">Extracts</string>
     <string name="log_out">Log Out</string>
-    <string name="explore">Explore</string>
     <string name="vapes">Vapes</string>
     <string name="extracts">Extracts</string>
     <string name="edibles">Edibles</string>
@@ -32,5 +31,11 @@
     <string name="accessories">Accessories</string>
     <string name="demo_email">dukauwa.du@gmail.com</string>
     <string name="mark_the_text">Mark the occassion with these must have products</string>
+    <string name="_50_off">50% Off</string>
+    <string name="everything">Everything</string>
+    <string name="code">with code: sativa 123</string>
+    <string name="home">home</string>
+    <string name="explore">Explore</string>
+    <string name="search_here">Search Here</string>
 
 </resources>

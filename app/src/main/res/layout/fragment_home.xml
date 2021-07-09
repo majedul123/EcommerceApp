@@ -165,19 +165,22 @@
         android:layout_marginBottom="@dimen/vt_space"
         app:layout_constraintBottom_toTopOf="@+id/top_catagory_text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="7dp"
+        android:elevation="1dp"
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tint="#E2E8E2"
-            app:srcCompat="@drawable/ic_pattern" />
+            android:layout_height="350dp"
+            android:scaleType="centerCrop"
+            android:tint="#F4F4F4"
+            app:srcCompat="@drawable/pattern" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/discount_layout"
             android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/leaves_image"
@@ -194,7 +197,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/vt_space"
                 android:fontFamily="@font/gilroy"
-                android:text="50% Off"
+                android:text="@string/_50_off"
                 android:textColor="#1E0702"
                 android:textSize="36sp"
                 android:textStyle="bold"
@@ -208,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/vt_space"
                 android:fontFamily="@font/gilroy"
-                android:text="Everything"
+                android:text="@string/everything"
                 android:textColor="#1E0702"
                 android:textSize="36sp"
                 android:textStyle="bold"
@@ -217,11 +220,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/percent_off" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/vt_space"
                 android:fontFamily="@font/gilroy"
-                android:text="with code: sativa 123"
+                android:text="@string/code"
                 android:textColor="#1E0702"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/discount_layout"

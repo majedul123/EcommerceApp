@@ -6,10 +6,10 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="@string/explore" />
+            android:title="@string/home" />
         <item
-            android:id="@+id/nav_vapes"
-            android:title="@string/vapes" />
+            android:id="@+id/nav_explore"
+            android:title="@string/explore" />
         <item
             android:id="@+id/nav_extracts"
             android:title="@string/extracts" />
