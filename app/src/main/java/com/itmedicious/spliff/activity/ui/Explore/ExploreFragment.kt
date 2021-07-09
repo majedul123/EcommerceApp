@@ -2,9 +2,10 @@ package com.itmedicious.spliff.activity.ui.Explore
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,8 +17,6 @@ class ExploreFragment : Fragment() {
 
     private var _binding: FragmentExploreBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -36,11 +35,12 @@ class ExploreFragment : Fragment() {
 
     private fun prepareData() {
         val products: List<Product> = listOf(
-            Product("Tom"),
-            Product("John"),
-            Product("John"),
-            Product("John"),
-            Product("John")
+            Product("Indica blend", "PURE SUN FARMS", "$20", 1),
+            Product("Ginger", "GINGER ROOT", "$30", 2),
+            Product("Indica blend", "PURE SUN FARMS", "$40", 3),
+            Product("Ginger", "GINGER ROOT BIG", "$60", 4),
+            Product("Ginger", "GINGER ROOT BIG", "$60", 4),
+            Product("Ginger", "GINGER ROOT BIG", "$60", 4)
         )
 
         val layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)

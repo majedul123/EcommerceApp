@@ -174,7 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:scaleType="centerCrop"
-            android:tint="#F4F4F4"
+            android:tint="#E5E5E5"
             app:srcCompat="@drawable/pattern" />
 
         <androidx.constraintlayout.widget.ConstraintLayout

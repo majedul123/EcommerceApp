@@ -25,10 +25,7 @@
     <string name="menu_extracts">Extracts</string>
     <string name="log_out">Log Out</string>
     <string name="vapes">Vapes</string>
-    <string name="extracts">Extracts</string>
-    <string name="edibles">Edibles</string>
     <string name="flowers">Flowers</string>
-    <string name="accessories">Accessories</string>
     <string name="demo_email">dukauwa.du@gmail.com</string>
     <string name="mark_the_text">Mark the occassion with these must have products</string>
     <string name="_50_off">50% Off</string>
@@ -41,5 +38,8 @@
     <string name="log_in_text">Log in</string>
     <string name="new_user">New user</string>
     <string name="registration">Registration</string>
+    <string name="extracts">Extracts</string>
+    <string name="accessories">Accessories</string>
+    <string name="edibles">Edibles</string>
 
 </resources>

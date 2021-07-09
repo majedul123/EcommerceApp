@@ -48,21 +48,19 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/hz_space"
+                android:layout_marginStart="@dimen/hz_space"
                 android:fontFamily="@font/gilroy"
-                android:text="Flowers"
+                android:text="@string/flowers"
                 android:textColor="@color/green"
                 android:textSize="14sp"
-                android:textStyle="bold"
-
-                />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/hz_space"
                 android:fontFamily="@font/gilroy"
-                android:text="Vapers"
+                android:text="@string/vapes"
                 android:textColor="@color/gray"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -72,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/hz_space"
                 android:fontFamily="@font/gilroy"
-                android:text="Extracts"
+                android:text="@string/extracts"
 
                 android:textColor="@color/gray"
                 android:textSize="14sp"
@@ -83,7 +81,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/vt_space"
                 android:fontFamily="@font/gilroy"
-                android:text="Flowers"
+                android:text="@string/flowers"
                 android:textColor="@color/gray"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -93,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/hz_space"
                 android:fontFamily="@font/gilroy"
-                android:text="Edibles"
+                android:text="@string/edibles"
                 android:textColor="@color/gray"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -103,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/hz_space"
                 android:fontFamily="@font/gilroy"
-                android:text="Accessories"
+                android:text="@string/accessories"
                 android:textColor="@color/gray"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -117,6 +115,8 @@
         android:id="@+id/item_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/hz_space"
         android:background="#E5E5E5"
         android:paddingBottom="@dimen/vt_space"
         app:layout_constraintEnd_toEndOf="parent"
