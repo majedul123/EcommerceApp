@@ -14,7 +14,6 @@ import android.view.Window
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.itmedicious.spliff.R
@@ -51,12 +50,12 @@ class ExploreAdapter : RecyclerView.Adapter<ExploreAdapter.ItemViewHolder>() {
     }
 
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val productPhotoArray = arrayOf(
-            R.drawable.ic_product_photo_one,
-            R.drawable.ic_product_photo_two,
-            R.drawable.ic_product_photo_three,
-            R.drawable.ic_product_photo_four
-        )
+//        private val productPhotoArray = arrayOf(
+//            R.drawable.ic_product_photo_one,
+//            R.drawable.ic_product_photo_two,
+//            R.drawable.ic_product_photo_three,
+//            R.drawable.ic_product_photo_four
+//        )
 
 
         var productDatabaseHelper: ProductDatabaseHelper = ProductDatabaseHelper(itemView.context)
@@ -72,8 +71,9 @@ class ExploreAdapter : RecyclerView.Adapter<ExploreAdapter.ItemViewHolder>() {
 
             productName?.text = product.name
             productSubName?.text = product.subName
-            productPrice?.text = product.productPrice
+            productPrice?.text = "$" + product.productPrice
 
+            //  productPhoto?.setImageResource(productPhotoArray[product.productImage - 1])
 
             productCard?.setOnClickListener {
                 showDialogue(itemView.context, product)

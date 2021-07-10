@@ -216,7 +216,7 @@
                 app:layout_constraintTop_toTopOf="@+id/add_to_bag_button" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/product_price_with_quantity"
+                android:id="@+id/total_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

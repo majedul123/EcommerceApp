@@ -38,31 +38,31 @@ class ExploreFragment : Fragment() {
             Product(
                 name = "Indica blend",
                 subName = "PURE SUN FARMS",
-                productPrice = "$20",
+                productPrice = "20",
                 productImage = 1
             ),
             Product(
                 name = "Ginger blend",
                 subName = "PURE GINGER ROOT",
-                productPrice = "$30",
+                productPrice = "30",
                 productImage = 3
             ),
             Product(
                 name = "Oryza sativa",
                 subName = "PURE ORYZA SATIVA",
-                productPrice = "$40",
+                productPrice = "40",
                 productImage = 2
             ),
             Product(
                 name = "Indica blend",
                 subName = "PURE SUN FARMS",
-                productPrice = "$20",
+                productPrice = "20",
                 productImage = 4
             ),
             Product(
                 name = "Indica blend",
                 subName = "PURE SUN FARMS",
-                productPrice = "$20",
+                productPrice = "20",
                 productImage = 4
             )
         )

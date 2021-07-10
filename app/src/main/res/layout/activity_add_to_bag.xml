@@ -51,7 +51,9 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_add_to_bag" />
+    <include
+        android:id="@+id/content_layout"
+        layout="@layout/content_add_to_bag" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
