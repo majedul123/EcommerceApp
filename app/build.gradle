@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -57,5 +58,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 
     implementation 'com.google.code.gson:gson:2.8.6'
+    // Kotlin
+    implementation("androidx.sqlite:sqlite-ktx:2.1.0")
+
 
 }

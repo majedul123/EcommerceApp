@@ -1,5 +1,6 @@
 package com.itmedicious.spliff.activity.ui.Explore
 
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -29,18 +30,35 @@ class ExploreFragment : Fragment() {
         val root: View = binding.root
 
         prepareData()
-
         return root
     }
 
     private fun prepareData() {
         val products: List<Product> = listOf(
-            Product("Indica blend", "PURE SUN FARMS", "$20", 1),
-            Product("Ginger", "GINGER ROOT", "$30", 2),
-            Product("Indica blend", "PURE SUN FARMS", "$40", 3),
-            Product("Ginger", "GINGER ROOT BIG", "$60", 4),
-            Product("Ginger", "GINGER ROOT BIG", "$60", 4),
-            Product("Ginger", "GINGER ROOT BIG", "$60", 4)
+            Product(
+                name = "Indica blend",
+                subName = "PURE SUN FARMS",
+                productPrice = "$20",
+                productImage = 1
+            ),
+            Product(
+                name = "Ginger blend",
+                subName = "PURE GINGER ROOT",
+                productPrice = "$30",
+                productImage = 3
+            ),
+            Product(
+                name = "Oryza sativa",
+                subName = "PURE ORYZA SATIVA",
+                productPrice = "$40",
+                productImage = 2
+            ),
+            Product(
+                name = "Indica blend",
+                subName = "PURE SUN FARMS",
+                productPrice = "$20",
+                productImage = 4
+            )
         )
 
         val layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
