@@ -1,9 +1,12 @@
 package com.itmedicious.spliff.activity.Bag
 
+import android.content.ContentValues
+import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
-import com.itmedicious.spliff.R
+import com.itmedicious.spliff.database.ProductDatabaseHelper
 import com.itmedicious.spliff.databinding.ActivityAddToBagBinding
 
 class AddToBagActivity : AppCompatActivity() {
@@ -11,12 +14,14 @@ class AddToBagActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityAddToBagBinding
 
-    private val productPhotoArray = arrayOf(
-        R.drawable.ic_product_photo_one,
-        R.drawable.ic_product_photo_four,
-        R.drawable.ic_product_photo_three,
-        R.drawable.ic_product_photo_four,
-    )
+
+//
+//    private val productPhotoArray = arrayOf(
+//        R.drawable.ic_product_photo_one,
+//        R.drawable.ic_product_photo_four,
+//        R.drawable.ic_product_photo_three,
+//        R.drawable.ic_product_photo_four,
+//    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +29,9 @@ class AddToBagActivity : AppCompatActivity() {
         binding = ActivityAddToBagBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
+
+        var productDatabaseHelper: ProductDatabaseHelper? = ProductDatabaseHelper(context =applicationContext)
+        val sqLiteDatabase: SQLiteDatabase? = productDatabaseHelper?.writableDatabase
 
         val bundle = intent.extras
 
@@ -61,6 +69,17 @@ class AddToBagActivity : AppCompatActivity() {
         }
 
 
+        binding?.contentLayout?.addToBagButton?.setOnClickListener {
+            val contentValue = ContentValues()
+            contentValue.put("name", name)
+            contentValue.put("subName", subName)
+            contentValue.put("productPrice", total.toString())
+            contentValue.put("productImage", productImage)
+            contentValue.put("productQuantity", productQuantity)
+            sqLiteDatabase?.insert(ProductDatabaseHelper.TABLE_NAME, null, contentValue)
+            startActivity(Intent(this, YourBagActivity::class.java))
+
+        }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }

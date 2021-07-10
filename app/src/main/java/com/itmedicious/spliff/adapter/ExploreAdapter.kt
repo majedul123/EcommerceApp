@@ -58,8 +58,6 @@ class ExploreAdapter : RecyclerView.Adapter<ExploreAdapter.ItemViewHolder>() {
 //        )
 
 
-        var productDatabaseHelper: ProductDatabaseHelper = ProductDatabaseHelper(itemView.context)
-        val sqLiteDatabase: SQLiteDatabase = productDatabaseHelper.writableDatabase
 
         private val productCard: CardView? = itemView.findViewById(R.id.product_card)
         val productPhoto: AppCompatImageView? = itemView.findViewById(R.id.product_photo)
@@ -125,17 +123,7 @@ class ExploreAdapter : RecyclerView.Adapter<ExploreAdapter.ItemViewHolder>() {
             dialog.show()
         }
 
-        private fun saveData(product: Product, productQuantity: Int) {
-            val contentValue = ContentValues()
-            contentValue.put("name", product.name)
-            contentValue.put("subName", product.subName)
-            contentValue.put("productPrice", product.productPrice)
-            contentValue.put("productImage", product.productImage)
-            contentValue.put("productQuantity", productQuantity)
-            val rowId = sqLiteDatabase.insert(TABLE_NAME, null, contentValue)
-            Log.e("SD", "Succefully data interted")
 
-        }
 
     }
 }
