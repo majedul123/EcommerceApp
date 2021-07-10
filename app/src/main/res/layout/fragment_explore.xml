@@ -116,7 +116,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="@dimen/hz_space"
+        android:layout_marginBottom="50dp"
         android:background="#E5E5E5"
         android:paddingBottom="@dimen/vt_space"
         app:layout_constraintEnd_toEndOf="parent"

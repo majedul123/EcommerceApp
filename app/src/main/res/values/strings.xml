@@ -41,5 +41,6 @@
     <string name="extracts">Extracts</string>
     <string name="accessories">Accessories</string>
     <string name="edibles">Edibles</string>
+    <string name="add_to_bag">Add to bag</string>
 
 </resources>

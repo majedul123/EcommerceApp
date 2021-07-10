@@ -58,6 +58,12 @@ class ExploreFragment : Fragment() {
                 subName = "PURE SUN FARMS",
                 productPrice = "$20",
                 productImage = 4
+            ),
+            Product(
+                name = "Indica blend",
+                subName = "PURE SUN FARMS",
+                productPrice = "$20",
+                productImage = 4
             )
         )
 
