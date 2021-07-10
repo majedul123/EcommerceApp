@@ -3,19 +3,22 @@ package com.itmedicious.spliff.adapter
 import android.app.Dialog
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
+import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
-import android.widget.Button
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.itmedicious.spliff.R
+import com.itmedicious.spliff.activity.Bag.AddToBagActivity
 import com.itmedicious.spliff.database.ProductDatabaseHelper
 import com.itmedicious.spliff.database.ProductDatabaseHelper.Companion.TABLE_NAME
 import com.itmedicious.spliff.model.Product
@@ -103,9 +106,20 @@ class ExploreAdapter : RecyclerView.Adapter<ExploreAdapter.ItemViewHolder>() {
                 }
             }
             addToBagButton?.setOnClickListener {
-                saveData(product, productQuantity)
+                // saveData(product, productQuantity)
 
                 dialog.dismiss()
+                val bundle = Bundle()
+                bundle.putString("name", product.name)
+                bundle.putString("subName", product.subName)
+                bundle.putString("productPrice", product.productPrice)
+                bundle.putInt("productImage", product.productImage)
+                bundle.putInt("productQuantity", productQuantity)
+                val i = Intent(context, AddToBagActivity::class.java)
+                i.putExtras(bundle)
+                context.startActivity(i)
+
+
             }
 
             dialog.show()
