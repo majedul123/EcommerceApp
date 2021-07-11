@@ -1,5 +1,6 @@
-package com.itmedicious.spliff.activity.Bag
+package com.itmedicious.spliff.activity
 
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
@@ -9,12 +10,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.itmedicious.spliff.adapter.BagAdapter
-import com.itmedicious.spliff.adapter.ExploreAdapter
 import com.itmedicious.spliff.database.ProductDatabaseHelper
 import com.itmedicious.spliff.database.ProductDatabaseHelper.Companion.TABLE_NAME
 import com.itmedicious.spliff.databinding.ActivityYourBagBinding
 import com.itmedicious.spliff.model.BagProduct
-import com.itmedicious.spliff.model.Product
 
 class BagActivity : AppCompatActivity() {
 
@@ -55,6 +54,13 @@ class BagActivity : AppCompatActivity() {
         val adapter = BagAdapter()
         binding?.contentLayout?.bagItemList?.adapter = adapter
         productList?.let { adapter.setValue(product = it) }
+
+
+        binding?.contentLayout?.createAccountText?.setOnClickListener {
+            startActivity(Intent(this, SuccessfulPaymentActivity::class.java))
+        }
+
+
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

@@ -14,12 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Spliff"
         android:usesCleartextTraffic="true">
+        <activity android:name=".activity.SuccessfulPaymentActivity"></activity>
         <activity
-            android:name=".activity.Bag.BagActivity"
+            android:name=".activity.BagActivity"
             android:label="@string/title_activity_your_bag"
-            android:theme="@style/Theme.Spliff.NoActionBar"></activity>
+            android:theme="@style/Theme.Spliff.NoActionBar" />
         <activity
-            android:name=".activity.Bag.AddToBagActivity"
+            android:name=".activity.AddToBagActivity"
             android:theme="@style/Theme.Spliff.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

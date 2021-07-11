@@ -12,9 +12,11 @@ interface BaseApiService {
 
     @Headers("Content-Type: application/json")
     @POST("/api/v1/login")
-    fun logIn(
-        @Body login: LogIn?,
-    ): Call<LoginResponse>
+    fun logIn(@Body login: LogIn?, ): Call<LoginResponse>
+
+    @Headers("Content-Type: application/json")
+    @POST("/api/v1/logout")
+    fun logOut(@Header("Authorization") accesToken: String? ): Call<ResponseBody>
 
 
 }

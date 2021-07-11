@@ -1,12 +1,9 @@
 package com.itmedicious.spliff.adapter
 
 import android.app.Dialog
-import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
-import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,9 +14,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.itmedicious.spliff.R
-import com.itmedicious.spliff.activity.Bag.AddToBagActivity
-import com.itmedicious.spliff.database.ProductDatabaseHelper
-import com.itmedicious.spliff.database.ProductDatabaseHelper.Companion.TABLE_NAME
+import com.itmedicious.spliff.activity.AddToBagActivity
 import com.itmedicious.spliff.model.Product
 
 

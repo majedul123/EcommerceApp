@@ -1,4 +1,4 @@
-package com.itmedicious.spliff.activity.Bag
+package com.itmedicious.spliff.activity
 
 import android.content.ContentValues
 import android.content.Intent

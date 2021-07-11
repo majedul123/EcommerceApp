@@ -31,13 +31,12 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_explore, R.id.nav_extracts
+                R.id.nav_home, R.id.nav_explore,  R.id.nav_logout
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-
 
 
     override fun onSupportNavigateUp(): Boolean {

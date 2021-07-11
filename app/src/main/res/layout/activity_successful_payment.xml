@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:paddingHorizontal="@dimen/hz_space"
+    tools:context=".activity.SuccessfulPaymentActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_shopping_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/gilroy"
+        android:padding="5dp"
+        android:text="@string/continue_shopping"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/continue_shopping_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="67dp"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/continus_shopping_description"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/continue_shopping_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/payment_successful_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="67dp"
+        android:fontFamily="@font/gilroy"
+        android:text="@string/payment_sucessful"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/continue_shopping_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ellipse"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="@dimen/hz_space"
+        android:src="@drawable/ic_ellipse"
+        app:layout_constraintBottom_toTopOf="@+id/payment_successful_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ellips"
+        android:layout_width="29dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_tik"
+        app:layout_constraintBottom_toBottomOf="@id/ellipse"
+        app:layout_constraintEnd_toEndOf="@id/ellipse"
+
+        app:layout_constraintStart_toStartOf="@+id/ellipse"
+        app:layout_constraintTop_toTopOf="@+id/ellipse" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
                         editor.putString("logged", "logged")
                         editor.putString("token", accessToken)
                         editor.apply()
-                        Toast.makeText(this@LoginActivity, "Success", Toast.LENGTH_SHORT).show()
+                      //  Toast.makeText(this@LoginActivity, "Success", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                         startActivity(intent)
@@ -84,6 +84,11 @@ class LoginActivity : AppCompatActivity() {
 
                 override fun onFailure(call: Call<LoginResponse?>, t: Throwable) {
                     Log.d("debug", "onFailure: ERROR > $t")
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "error "+t.message.toString(),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             })
     }
