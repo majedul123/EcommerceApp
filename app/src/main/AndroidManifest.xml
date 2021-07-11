@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Spliff"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activity.Bag.YourBagActivity"
+            android:name=".activity.Bag.BagActivity"
             android:label="@string/title_activity_your_bag"
             android:theme="@style/Theme.Spliff.NoActionBar"></activity>
         <activity

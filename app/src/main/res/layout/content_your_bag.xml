@@ -3,7 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bag_item_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="Create an account"
+        android:id="@+id/create_account_text"
+        android:layout_marginHorizontal="@dimen/hz_space"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

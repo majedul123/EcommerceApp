@@ -77,7 +77,7 @@ class AddToBagActivity : AppCompatActivity() {
             contentValue.put("productImage", productImage)
             contentValue.put("productQuantity", productQuantity)
             sqLiteDatabase?.insert(ProductDatabaseHelper.TABLE_NAME, null, contentValue)
-            startActivity(Intent(this, YourBagActivity::class.java))
+            startActivity(Intent(this, BagActivity::class.java))
 
         }
 
